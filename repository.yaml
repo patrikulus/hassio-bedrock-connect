@@ -2,3 +2,4 @@
 name: 'Bedrock connect addon for Home Assistant'
 url: 'https://github.com/patrikulus/hassio-bedrock-connect'
 maintainer: 'https://github.com/patrikulus'
+slug: 'bedrockconnect'
