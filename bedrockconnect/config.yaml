@@ -5,7 +5,6 @@ description: "A Home Assistant add-on for BedrockConnect"
 arch:
   - aarch64
   - amd64
-  - armv7
 startup: "services"
 boot: "auto"
 options:
@@ -22,4 +21,4 @@ ports:
 init: true
 environment:
   BC_CUSTOM_SERVERS: "/data/bedrock_servers.json"
-image: "pugmatt/bedrock-connect/{arch}"
+image: "pugmatt/bedrock-connect"
