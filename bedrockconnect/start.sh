@@ -15,8 +15,7 @@ echo "${servers_json}" > /data/bedrock_servers.json
 if [ -f /data/bedrock_servers.json ]; then
     echo "Server list written to /data/bedrock_servers.json"
 else
-    echo "Failed to write server list!"
-    exit 1
+    echo "Failed to write server list! Please specify servers in the extension config."
 fi
 
 echo "Initialization completed. Starting BedrockConnect..."
