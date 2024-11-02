@@ -12,4 +12,4 @@ RUN chmod +x ./start.sh
 
 EXPOSE 19132/udp
 
-CMD ["java"]
+CMD ["./start.sh"]
