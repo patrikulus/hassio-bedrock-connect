@@ -21,4 +21,3 @@ ports:
 init: true
 environment:
   BC_CUSTOM_SERVERS: "/data/bedrock_servers.json"
-image: "pugmatt/bedrock-connect"

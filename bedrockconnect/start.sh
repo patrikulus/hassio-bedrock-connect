@@ -1,18 +1,23 @@
-#!/usr/bin/env bash
+#!/bin/bash
+
+echo "Starting start.sh script..."
 
 # Path to the add-on options JSON (from Home Assistant)
 CONFIG_PATH=/data/options.json
 
-# Convert the YAML list of servers to JSON
+# Convert the YAML configuration (servers) to JSON format
 servers_json=$(jq -c '.servers' $CONFIG_PATH)
 
-# Write the servers JSON to the desired location
+# Write the converted JSON to a file for BedrockConnect to use
 echo "${servers_json}" > /data/bedrock_servers.json
 
-# Verify the file creation
+# Check if the file was created successfully
 if [ -f /data/bedrock_servers.json ]; then
     echo "Server list written to /data/bedrock_servers.json"
 else
     echo "Failed to write server list!"
     exit 1
 fi
+
+echo "Initialization completed. Starting BedrockConnect..."
+exec java -Xms256M -Xmx256M -jar BedrockConnect-1.0-SNAPSHOT.jar nodb=true
