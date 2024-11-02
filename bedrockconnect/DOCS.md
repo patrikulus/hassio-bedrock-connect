@@ -21,8 +21,10 @@ Once the add-on is installed, you can configure the list of custom Minecraft Bed
 ```yaml
 servers:
   - name: "My Server 1"
+    iconUrl: https://i.imgur.com/nhumQVP.png
     address: "server1.example.com"
     port: 19132
   - name: "My Server 2"
+    iconUrl: https://i.imgur.com/nhumQVP.png
     address: "server2.example.com"
     port: 19132
