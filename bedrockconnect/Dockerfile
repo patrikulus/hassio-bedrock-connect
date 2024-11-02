@@ -5,7 +5,7 @@ RUN apt update && apt install -y jq
 RUN mkdir -p /docker/brc
 WORKDIR /docker/brc
 
-ADD https://github.com/Pugmatt/BedrockConnect/releases/latest/download/BedrockConnect-1.0-SNAPSHOT.jar .
+ADD https://github.com/Pugmatt/BedrockConnect/releases/1.51/download/BedrockConnect-1.0-SNAPSHOT.jar .
 
 COPY start.sh ./start.sh
 RUN chmod +x ./start.sh
